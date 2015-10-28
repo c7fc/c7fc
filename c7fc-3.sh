@@ -1,23 +1,8 @@
 echo  3rd STEP - Postfix Dovecot SASL
 #####################################
+# Loading utility function
+. ./c7fc.util
 
-# Utility Functions
-#########################
-loudrun() {
-echo "RUN:" $@
-$@
-}
-
-backupconf(){
-local targetfile=$1
-if [ -e "${targetfile}" ]; then
-local fmd5=$(md5sum ${targetfile} | awk '{print $1}' )
-loudrun cp -p "${targetfile}" "${targetfile}_${fmd5}.bak"
-loudrun mv "${targetfile}_${fmd5}.bak" ./
-else
-echo ${targetfile} " not found"
-fi
-}
 #########################
 
 if [ ! -e c7fc.conf ]; then

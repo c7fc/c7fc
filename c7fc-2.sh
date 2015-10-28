@@ -1,28 +1,11 @@
 echo  SECONDSTEP - Firewall, DNS, Proxy
-
-# Utility Functions
-#########################
-loudrun() {
-echo "RUN:" $@
-$@
-}
-
-backupconf(){
-local targetfile=$1
-if [ -e "${targetfile}" ]; then
-local fmd5=$(md5sum ${targetfile} | awk '{print $1}' )
-loudrun cp -p "${targetfile}" "${targetfile}_${fmd5}.bak"
-loudrun mv "${targetfile}_${fmd5}.bak" ./
-else
-echo ${targetfile} " not found"
-fi
-}
-#########################
-
+#######################################
+# Loading utility function
+. ./c7fc.util
 
 #####################################
 if [ ! -e c7fc.conf ]; then
-echo c7fc.conf is needed! Bye!
+echo c7fc.conf is required! Bye!
 exit
 fi 
 
