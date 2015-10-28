@@ -7,13 +7,13 @@ When setup CentOS 7 that has 2 NIC as NAT and some purpose, the scripts support 
 # Usage 
 1. # curl -O http://c7fastconf.appspot.com/c7fc-[1-3].sh
 2. # curl http://c7fastconf.appspot.com/conf -o c7fc.conf
-3. edit c7fc.conf if necessary , and run scripts.
-   # sh c7fc-1.sh
-   # reboot
-   # sh c7fc-2.sh
-   # reboot
-   # sh c7fc-3.sh
-   # reboot
+3. edit c7fc.conf as your requirement, and run scripts.
+	# sh c7fc-1.sh
+	# reboot
+	# sh c7fc-2.sh
+	# reboot
+	# sh c7fc-3.sh
+	# reboot
 
 ###  c7fc.conf 
          nhost=myhost         #(h)
