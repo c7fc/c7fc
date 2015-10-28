@@ -5,9 +5,9 @@ Scripts for configuring CentOS7 for IPMasq/MTA/IMAP/Named/Proxy
 When setup CentOS 7 that has 2 NIC as NAT and some purpose, the scripts support to configure.
 
 # Usage 
-1. # curl -O http://c7fastconf.appspot.com/c7fc-[1-3].sh
-2. # curl http://c7fastconf.appspot.com/conf -o c7fc.conf
-3. edit c7fc.conf as your requirement, and run scripts.
+1. # git clone https://github.com/c7fc/c7fc
+2. edit c7fc.conf as your requirement.
+3. run scripts.
 	# sh c7fc-1.sh
 	# reboot
 	# sh c7fc-2.sh
